@@ -8,7 +8,7 @@
 \title{Making Data count}
 
 
-\author{John Kratz\textsuperscript{1}, Carly Strasser\textsuperscript{2{*}}}
+\author{John Kratz\textsuperscript{1{*}}, Carly Strasser\textsuperscript{2}}
 
 \maketitle
 1. California Digital Library 2. DataCite 
@@ -21,17 +21,20 @@
 % Introduction
 % ==============================================================
 
-Data undergirds all of science-- yet scientists, funders, and administrators often fail to recognize data sharing or publication as valuable scholarship.
-One essential component of such recognition would be an accepted set of metrics to gauge the significance of the contribution made by publishing any given dataset.
-Journal article impact has long been estimated by counting the number of subsequent articles that cite an article; now, a suite of internet-based alternative metrics (``altmetrics'') seek to provide faster assessment and capture other kinds of impact.
-Several efforts are underway to adapt journal metrics for data or develop new ones: the Research Data Alliance (RDA) Data Bibliometrics Working Group (\url{http://rd-alliance.org/group/rdawds-publishing-data-bibliometrics-wg/case-statement/rdawds-publishing-data-bibliometrics-wg}{}); the National Informations Standards Organization (NISO) Alternative Assessment Metrics Initiative (\url{http://www.niso.org/topics/tl/altmetrics_initiative/}), which explicitly considers altmetrics for non-traditional outputs like software and data; and Making Data Count (\url{http://mdc.plos.org}), a collaboration between the California Digital Library, the Public Library of Science (PLOS), and DataONE to define a suite of Data Level Metrics (DLMs) and adapt the existing PLOS Article Level Metric (ALM) tool(\url{http://alm.plos.org}) to capture them.
+Data undergirds all of science, yet scientists, funders, and administrators often fail to recognize data sharing or publication as valuable scholarship.
+One essential component of such recognition would be an accepted set of metrics to gauge the contribution made by any given dataset.
+An article's significance has long been estimated by counting the number of subsequent articles that cite it. 
+Now, a suite of internet-based alternative metrics (``altmetrics'') seek to provide faster assessment and capture other kinds of impact\cite{priem_altmetrics_2012}.
+% something about why data is different
+% something about data papers
+Several efforts are underway to adapt journal metrics for data or develop new ones: the Research Data Alliance (RDA) Data Bibliometrics Working Group (\url{http://rd-alliance.org/group/rdawds-publishing-data-bibliometrics-wg/case-statement/rdawds-publishing-data-bibliometrics-wg}{}); the National Information Standards Organization (NISO) Alternative Assessment Metrics Initiative (\url{http://www.niso.org/topics/tl/altmetrics_initiative/}), which explicitly considers altmetrics for non-traditional products like software and data; and Making Data Count (\url{http://mdc.plos.org}), a collaboration between the California Digital Library, the Public Library of Science (PLOS), and DataONE to define a suite of Data Level Metrics (DLMs) and adapt the existing PLOS Article Level Metric (ALM) tool(\url{http://alm.plos.org}) to capture them.
 
 % ==============================================================
 % Methods and Demographics
 % ==============================================================
 
-To define useful DLMs, we must understand the values and needs of the researchers who create and re-use data and of the managers (i.e., database and repository staff) who preserve and publish it.
-During the research phase of Making Data Count, we asked researchers and data managers questions about data sharing, discovery, and metrics.
+To define useful DLMs, we must understand the values and needs of the researchers who create and re-use data, and of the data managers who preserve and publish it.
+During the research phase of Making Data Count, we asked researchers and database or repository staff questions about data sharing, discovery, and metrics.
 We solicited responses to a pair of online surveys via social media, listservs, and posts to CDL and PLOS blogs-- ultimately hearing from 247 researchers and 73 data managers in November and December of 2014.
 Most researchers worked at academic institutions (78\%), and most were based in the United States (57\%) or United Kingdom (14\%).
 Both academic (64\%) and government-run (22\%) repositories were significantly represented; repositories were primarily located in the United States (72\%) or United Kingdom (11\%).
@@ -43,20 +46,24 @@ Biology is the most popular discipline (53\%), but environmental (17\%) and soci
 % ==============================================================
 
 To situate the collection and display of data metrics, we wanted to know where on the internet researchers go to share their data and to find data to use. 
-Data sharing behavior has been surveyed extensively; consistent with previous surveys\cite{@akers_disciplinary_2013, @wallis_if_2013, @kratz_researcher_2015}, person to person (e.g., via email) sharing in response to direct requests was the most common behavior; 90\% of respondent had shared at least some data this way. 
-However, more respondents said they used a database or repository to share most or all of their data (24\%) than email (16\%). 
-This makes sense, as sharing on request is likely to be much more haphazard.
+Data sharing behavior has been relatively well-surveyed\cite{@tenopir_data_2011, @akers_disciplinary_2013, @wallis_if_2013, @aydinoglu_data_2014, @kratz_researcher_2015}. 
+Consistent with previous surveys, direct transmission (e.g., via email) on request was the most common behavior, and 90\% of respondents had shared at least some data this way.
+Among the drawbacks to this approach– including duplicated effort, the potential for access to be denied capriciously, and the absence of any component of preservation– is that it is invisible to measurement. 
+However, more tractable approaches are also used.
+When sharing most or all of their data, respondents were less likely to use direct transmission (16\%) than a database or repository (24\%)-- presumably because database upload is likely to be more systematic and less tailored to particular requests.
 
-How researchers search for data in their role as (re-)users is less well understood, so we asked researchers how likely they would be to do so in each of five ways.
+How scientists search for data in their role as (re-)users has been less well studied, so we asked researchers how likely they would be to use each of five possible methods.
 No single method predominated.
-A 63\% majority said that they would ``definitely'' use more than one method, and three search methods would definitely be used by most respondents: via references in the literature (59\%), a discipline-specific database(58\%), or a general purpose search engine (51\%). 
-When asked to write-in particular sources, the general-purpose repository Dryad (\url{http://datadryad.org/}) was the most frequently mentioned ($n=16$); Google and ``journal articles'' were tied for second ($n=14$). 
-Respondents were unlikely to 'crowd source' data discovery via social media (42\% ``no chance'') or discussion forums (40\% no chance). 
+A 63\% majority said that they would ``definitely'' use more than one method, and three search methods would definitely be used by most respondents: via references in the literature (59\%), a discipline-specific database (58\%), or a general purpose search engine (51\%). 
+When asked to name particular sources, the general-purpose repository Dryad (\url{http://datadryad.org/}) was most frequently mentioned ($n=16$); Google and ``journal articles'' were tied for second ($n=14$). 
+Respondents were unlikely to ``crowd source'' data discovery via social media (42\% ``no chance'') or discussion forums (40\% no chance).
+However, direct inquiries to knowledgable colleagues are probably more common, and were a relatively highly cited write-in source ($n=12$).
 
 % ==============================================================
 % Information about data users
 % ==============================================================
 
+% why did we ask about this?
 Not surprisingly, when asked what they would be interested to know about users of their data, more researchers chose ``name and contact information'' as their first choice than any other option.
 However, a significant fraction (13\%) ranked this option last, and the average interest in discipline was slightly higher.
 The least interesting option we presented was geographic location, put in last place by 58\%.
@@ -88,6 +95,14 @@ The scholarly communication community recognized the consensus that data used in
 Researchers agree: 95\% of respondents to a DataONE survey agreed that formal citation was a fair condition for data sharing, as did 87\% of astrobiologists in a follow-up survey \cite{@tenopir_data_2011, @aydinoglu_data_2014}. 
 Citation``in the references like normal publications'' is the preferred method of receiving credit for data sharing by 71\% of biodiversity researchers and by 75\% of respondents to our earlier survey \cite{@enke_users_2012, @kratz_researcher_2015}.
 The Thomson-Reuters Data Citation Index (\url{http://thomsonreuters.com/data-citation-index/}) is a good start, but we need to firm up this infrastructure.
+% something about citation harvesting infrastructure
+% maybe something about data journals
+
+Download counts and page views are much more manageable.
+Downloads are considered valuable.
+Page views aren't.
+Repositories should collect and expose DLs at least.
+
 
 
 \section*{Acknowledgements}
