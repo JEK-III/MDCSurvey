@@ -2,7 +2,10 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage{babel}
+
+\usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
+
 \begin{document}
 
 \title{Making Data Count}
@@ -48,40 +51,46 @@ Biology is the most popular discipline (53\%), but environmental (17\%) and soci
 
 To situate the collection and display of data metrics, we wanted to know where on the internet researchers go to share their data and to find data to use. 
 Data sharing behavior has been relatively well-surveyed\cite{@tenopir_data_2011, @akers_disciplinary_2013, @wallis_if_2013, @aydinoglu_data_2014, @kratz_researcher_2015}. 
-Consistent with previous surveys, direct transmission (e.g., via email) on request was the most common behavior, and 90\% of respondents had shared at least some data this way.
-Among the drawbacks to this approach-- including duplicated effort, the potential for access to be denied capriciously, and the absence of any component of preservation-- is that it is invisible to measurement. 
-However, more tractable approaches are also used.
-When sharing most or all of their data, respondents were less likely to use direct transmission (16\%) than a database or repository (24\%)-- presumably because database upload is likely to be more systematic and less tailored to particular requests.
+Consistent with previous surveys, direct transmission (e.g., via email) on request was the most common behavior, and 74\% of respondents had shared some data this way and 16\% had shared ``most/all'' of their data that way.
+Among the drawbacks to this approach-- including duplicated effort, the potential for capricious denial of access, and the absence of any component of preservation-- is that it is invisible to measurement. 
+Fortunately, the most tractable method, publication via a database or repository, is also in wide use.
+It is the most common channel for sharing most/all of the data (used by 24\%, presumably because database upload is more likely to be systematic than responding to particular requests) and another 47\% shared some of their data that way.
 
-How scientists search for data in their role as (re-)users has been less well studied, so we asked researchers how likely they would be to use each of five possible methods.
+How and where scientists search for data in their role as (re-)users has been less well studied, so we asked researchers how likely they would be to use each of five possible strategies.
 No single method predominated.
-A 63\% majority said that they would ``definitely'' use more than one method, and three search methods would definitely be used by most respondents: via references in the literature (59\%), a discipline-specific database (58\%), or a general purpose search engine (51\%). 
+A 63\% majority said that they would ``definitely'' use more than one strategy, and three of the five would definitely be used by most respondents: via references in the literature (59\%), a discipline-specific database (58\%), or a general purpose search engine (51\%). 
 When asked to name particular sources, the general-purpose repository Dryad (\url{http://datadryad.org/}) was most frequently mentioned ($n=16$); Google and ``journal articles'' were tied for second ($n=14$). 
-Respondents were unlikely to ``crowd source'' data discovery via social media (42\% ``no chance'') or discussion forums (40\% no chance).
+Respondents were unlikely to crowd source data discovery via social media (42\% ``no chance'') or discussion forums (40\% no chance).
 However, direct inquiries to knowledgeable colleagues are probably more common, and were a relatively highly cited write-in source ($n=12$).
+
+We sought to characterize the role of public data in respondents research process by asking how frequently they used public data to generate ideas/hypotheses at the outset, to reach the main conclusion of a paper, or to support the main conclusion of a paper; we additionally asked whether they had ever used public data to reproduce of confirm a published analysis.
+A large 96\% of respondents said that they at least ``occasionally'' used public data in at least one capacity; a smaller 56\% majority used public data ``often'' in at least one capacity.
+Furthermore much of this use is central to research, 28\% often and 42\% occasionally use public data to reach the main conclusions of a paper, although use for idea generation (41\% often, 46\% occasionally) and support (39\% often, 47\% occasionally) were higher.
+
 
 % ==============================================================
 % Information about data users
 % ==============================================================
 
-% why did we ask about this?
-Not surprisingly, when asked what they would be interested to know about users of their data, more researchers chose ``name and contact information'' as their first choice than any other option.
-However, a significant fraction (13\%) ranked this option last, and the average interest in discipline was slightly higher.
+Before even a T\&P committee or grant review board, the primary consumer of metrics about a dataset are the creators themselves; metrics can provide a sense of what data is being used for and reassure them that it is being used and that sharing is worthwhile.
+Data managers have a stake in knowing about users of their data to justify funding and tailor services.
+We asked what researchers would be most interested to know about users of their data and, not surprisingly, many wanted to know everything: researchers chose ``name and contact information'' as their first choice than any other option (48\%).
+However, a significant fraction (13\%) ranked this option last (of five), and the highest average interest in discipline was slightly higher.
 The least interesting option we presented was geographic location, put in last place by 58\%.
 Data managers overwhelmingly chose discipline as the most interesting thing to know about users of their data (67\%).
-The current practices of repositories were split roughly in half between repositories that require a real name (47\%), email address (44\%), and institutional affiliation (40\%) and those that provide data without asking for anything (47\%).
+The current practices of repositories were split roughly in half between repositories that require a name (47\%), email address (44\%), and institutional affiliation (40\%) and those that provide data without collecting any information (47\%).
 
 % ==============================================================
 % Information about data impact 
 % ==============================================================
 
-Citations are overwhelmingly valued as the coin of scholarly prestige. 
-When asked to rank potential information about data use, 85\% of researchers and 61\% of data managers chose citations as the most interesting thing to know about their data. 
+As a measure of impact, citations are still the coin of the realm.
+When asked to rank potential information about data use, 85\% of researchers and 61\% of data managers chose citations as the most interesting thing to know about their data(Figure \ref{fig:results}b,c). 
 The preference of researchers is consistent with previous surveys\cite{@kratz_researcher_2015}, but it is more surprising that data managers prefer a purely scholarly measure so clearly over ``real world'' impact (ranked first by only 23\%). 
 Download count was a consistent second choice of researchers (by 64\%). 
 Landing page views were ranked last by >50\% of both researchers and data managers.
 
-As a practical matter, it is important to understand what metrics are already being tracked and exposed by repositories. 
+As a practical matter, it is important to understand what metrics are already being tracked and exposed by repositories(Figure \ref{fig:results}d). 
 We found that most repositories track downloads (85\%) and landing page views (66\%). 
 However, only 35\% of the repositories that track downloads expose them via API or display on the landing page; this ratio is roughly similar for all of the metrics we asked about. 
 Despite the extreme interest in citation counts, relatively few repositories (23\%) track them. 
@@ -136,7 +145,17 @@ and continue with a short description of what is shown in each panel,
 as well as explaining any symbols used. Legend must total no more
 than 350 words, and may contain literature references. 
 
-
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=6in]{MDC_Figure_rough_sketch.jpg}
+\end{center}
+\caption{
+{\bf Citations are valuable}
+Additional explanation.
+Error bars depict bootstrapped 95\% confidence intervals. 
+}
+\label{fig:results}
+\end{figure}
 
 \begin{thebibliography}{1}
 \expandafter\ifx\csname url\endcsname\relax
