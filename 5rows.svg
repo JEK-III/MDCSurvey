@@ -1623,10 +1623,10 @@ L907.2 630" style="fill:none;"/>
    <g id="legend_1">
     <g id="patch_19">
      <path d="
-M132.4 676.457
-L164.4 676.457
-L164.4 665.257
-L132.4 665.257
+M131.6 674.138
+L159.6 674.138
+L159.6 664.338
+L131.6 664.338
 z
 " style="fill:#c6dbef;stroke:#ffffff;stroke-linejoin:miter;stroke-width:0.3;"/>
     </g>
@@ -1647,7 +1647,7 @@ L9.8125 0
 z
 " id="BitstreamVeraSans-Roman-4e"/>
      </defs>
-     <g style="fill:#262626;" transform="translate(177.2 676.4575)scale(0.16 -0.16)">
+     <g style="fill:#262626;" transform="translate(170.8 674.1378125)scale(0.14 -0.14)">
       <use xlink:href="#BitstreamVeraSans-Roman-4e"/>
       <use x="74.8046875" xlink:href="#BitstreamVeraSans-Roman-6f"/>
       <use x="135.986328125" xlink:href="#BitstreamVeraSans-Roman-20"/>
@@ -1661,10 +1661,10 @@ z
     </g>
     <g id="patch_20">
      <path d="
-M467.554 676.457
-L499.554 676.457
-L499.554 665.257
-L467.554 665.257
+M473.685 674.138
+L501.685 674.138
+L501.685 664.338
+L473.685 664.338
 z
 " style="fill:#6aaed6;stroke:#ffffff;stroke-linejoin:miter;stroke-width:0.3;"/>
     </g>
@@ -1693,7 +1693,7 @@ L9.8125 0
 z
 " id="BitstreamVeraSans-Roman-50"/>
      </defs>
-     <g style="fill:#262626;" transform="translate(512.35375 676.4575)scale(0.16 -0.16)">
+     <g style="fill:#262626;" transform="translate(512.88453125 674.1378125)scale(0.14 -0.14)">
       <use xlink:href="#BitstreamVeraSans-Roman-50"/>
       <use x="56.677734375" xlink:href="#BitstreamVeraSans-Roman-6f"/>
       <use x="117.859375" xlink:href="#BitstreamVeraSans-Roman-73"/>
@@ -1706,10 +1706,10 @@ z
     </g>
     <g id="patch_21">
      <path d="
-M781.188 676.457
-L813.188 676.457
-L813.188 665.257
-L781.188 665.257
+M796.939 674.138
+L824.939 674.138
+L824.939 664.338
+L796.939 664.338
 z
 " style="fill:#2070b4;stroke:#ffffff;stroke-linejoin:miter;stroke-width:0.3;"/>
     </g>
@@ -1736,7 +1736,7 @@ L9.8125 0
 z
 " id="BitstreamVeraSans-Roman-44"/>
      </defs>
-     <g style="fill:#262626;" transform="translate(825.9875 676.4575)scale(0.16 -0.16)">
+     <g style="fill:#262626;" transform="translate(836.1390625 674.1378125)scale(0.14 -0.14)">
       <use xlink:href="#BitstreamVeraSans-Roman-44"/>
       <use x="77.001953125" xlink:href="#BitstreamVeraSans-Roman-65"/>
       <use x="138.525390625" xlink:href="#BitstreamVeraSans-Roman-66"/>
