@@ -27,116 +27,133 @@
 % Introduction
 % ==============================================================
 
-Data undergirds all of science and should be recognized as valuable scholarship-- which requires accepted metrics to gauge the contribution made by any given dataset.
-The significance of an article has long been estimated by counting the number of subsequent articles that cite it. 
-Now, a suite of internet-based alternative metrics (``altmetrics'') seek to provide faster assessment and capture other kinds of impact \cite{priem_altmetrics_2012}.
-Data descriptor articles published in journals like \textit{Earth Systems Science Data} or \textit{Scientific Data} could serve as traditionally-measurable proxies for datasets \cite{pfeiffenberger_earth_2011, editors_more_2014}.
-In addition, datasets themselves are susceptible to many of the same metrics as articles-- but the translation is not straightforward.
-The activities of opening a landing page, downloading, or citing are all likely to have different significance in relation to a dataset than an article.
+Data undergirds all of science and published data should be recognized as valuable scholarship, but scholarly recognition relies on accepted metrics of significance-- which data lacks.
+The impact of a journal article has traditionally been estimated by counting the number of subsequent articles that cite it. 
+A suite of internet-based alternative metrics (``altmetrics'') seek to provide faster assessment and to capture other kinds of impact \cite{priem_altmetrics_2012}.
+Article-centered metrics like these can measure data by proxy, via data descriptor articles in journals like \textit{Earth Systems Science Data} or \textit{Scientific Data}\cite{pfeiffenberger_earth_2011, editors_more_2014}.
+Or, article metrics can be applied to datasets themselves.
+However, the translation is not always straightforward; opening a web page, downloading, or citing all mean different things if the target is a dataset rather than an article.
 
-Multiple efforts are underway investigate traditional, alternative, and novel metrics for data: the Research Data Alliance Data Bibliometrics Working Group (\url{http://rd-alliance.org/group/rdawds-publishing-data-bibliometrics-wg/case-statement/rdawds-publishing-data-bibliometrics-wg}{}); the National Information Standards Organization (NISO) Alternative Assessment Metrics Initiative (\url{http://www.niso.org/topics/tl/altmetrics_initiative/}), which explicitly considers altmetrics for non-traditional products like software and data; and Making Data Count (\url{http://mdc.plos.org}), a collaboration between the California Digital Library, the Public Library of Science (PLOS), and DataONE to define a suite of Data Level Metrics  and adapt the existing PLOS Article Level Metric tool(\url{http://alm.plos.org}) to capture them.
+Several groups are investigating traditional, alternative, and novel metrics for data. 
+The Research Data Alliance Data Bibliometrics Working Group aims to ``conceptualize data metrics and corresponding services'' (\url{http://rd-alliance.org/group/rdawds-publishing-data-bibliometrics-wg/case-statement/rdawds-publishing-data-bibliometrics-wg}{}). 
+The National Information Standards Organization (NISO) Alternative Assessment Metrics Initiative explicitly includes non-traditional products like software and data (\url{http://www.niso.org/topics/tl/altmetrics_initiative/}).  
+Here, we present results from Making Data Count (\url{http://mdc.plos.org}), a collaboration between the California Digital Library, the Public Library of Science (PLOS), and DataONE to define a suite of data metrics, then adapt the existing PLOS Article Level Metric tool (\url{http://alm.plos.org}) to capture and present them.
 
 
 % ==============================================================
 % Methods and Demographics
 % ==============================================================
 
-To define useful data metrics, we must understand the values and needs of the researchers who create and use data, and of the data managers who preserve and publish it.
-In early 2014, we conducted a survey of researcher perspectives on data publication and peer review that touched on metrics of impact; respondents found citation and download counts to be significantly more useful than search rank or altmetrics \cite{kratz_researcher_2015}.
-As part of the research phase of Making Data Count, we have now expanded on this work with new surveys for researchers and data managers about data sharing, discovery, and metrics.
+To develop useful metrics, we must understand the needs and values of both the researchers who create and use data, and the data managers who preserve and publish it.
+Before Making Data Count was conceived, we had conducted a survey of researcher perspectives on data publication that touched briefly on metrics of impact; respondents to that survey found citation and download counts much more useful than search rank or altmetrics \cite{kratz_researcher_2015}.
+During the research phase of Making Data Count, we expanded on this work with new surveys for researchers and data managers about data sharing, discovery, and metrics.
 In November and December of 2014, we solicited responses to a pair of online surveys via social media, listservs, and posts to CDL and PLOS blogs-- ultimately hearing from 247 researchers and 73 data managers \cite{kratz_making_2015}.
 Most researchers worked at academic institutions (78\%), and most were based in the United States (57\%) or United Kingdom (14\%).
 Both academic (64\%) and government-run (22\%) repositories were significantly represented; repositories were primarily located in the United States (72\%) or United Kingdom (11\%).
-Researchers from across the academic career spectrum responded; principal investigators (42\%), postdocs (21\%), and graduate students (19\%) were all well represented. 
-Biology was the most popular discipline (53\%), but environmental (17\%) and social (10\%) science are also significantly represented. 
+Researcher respondents covered the academic career spectrum, from principal investigators (42\%), to postdocs (21\%), and graduate students (19\%). 
+Biology was the best-represented discipline (53\%), along with environmental (17\%) and social (10\%) science. 
 
 
 % ==============================================================
 % Locations for sharing
 % ==============================================================
 
-To situate the collection and display of data metrics, we wanted to know where on the internet researchers go to share their data or to find data to use. 
-Data sharing behavior has been relatively well-surveyed \cite{tenopir_data_2011, akers_disciplinary_2013, wallis_if_2013, aydinoglu_data_2014, kratz_researcher_2015}. 
-Consistent with these previous surveys, direct transmission (e.g., via email) on request was the most common behavior: 74\% of respondents had shared some data this way and 16\% had shared ``most/all'' of their data that way.
+To collect and communicate data metrics, we need to know where on the internet researchers go to share their data or to search for data to use. 
+Fortunately, data sharing behavior has been well-studied \cite{tenopir_data_2011, akers_disciplinary_2013, wallis_if_2013, aydinoglu_data_2014, kratz_researcher_2015}. 
+Consistent with previous surveys, direct transmission (e.g., via email) on request was the most common behavior: 74\% of respondents had shared some data and 16\% had shared ``most/all'' of their data that way.
 Among the drawbacks to this approach-- including the potential for capricious denial of access-- is that it is invisible to measurement. 
 Fortunately, researchers also often share over a more tractable channel: 71\% have published data in a database or repository.
-Furthermore, the subset of researchers who shared the most were especially likely to do so that way; 57\% of the 94 respondents who shared most/all of their data put it in a database or repository.
+The researchers who shared the most were especially likely to do so that way; 57\% of the 94 respondents who shared most/all of their data put it in a database or repository.
 
 
 % ==============================================================
 % Information about data users
 % ==============================================================
 
-Data sharing on request may be popular because it enables researchers to know who is using their data for what purpose.
-Data metrics available via public repositories might give researchers this information, while allowing data to be more readily available.
-We asked researchers to rank their interest in five possible pieces of information about users of their data and, not surprisingly, the most detailed option was also the most popular.
-``Name and contact information,'' was chosen as the most interesting by 48\% of researchers, much more than the less-specific options: discipline (32\%), institution type (8\%), institutional affiliation (6\%), and geographic location (5\%).
+Researchers want to know who is using their data for what purpose \cite{tenopir_data_2011, bobrow_establishing_2014}.
+This understandable wish explains, in part, the popularity of sharing on request.
+Public repositories could satisfy this interest by presenting metrics of data users, while making the data more readily available.
+We asked researchers to rank their interest in five pieces of information about users of their data; not surprisingly, the most detailed option was also the most popular.
+Almost half (48\%) ranked ``name and contact information,''  as the most interesting, many fewer chose the less-specific options: discipline (32\%), institution type (8\%), institutional affiliation (6\%), and geographic location (5\%).
 However, a substantial proportion (13\%) ranked this option last, and average interest in discipline was equally high.
-When asked a similar question, data managers chose discipline as the most interesting thing to know about users of their data (67\%).
-In terms of current practice, repositories are split roughly in half between collecting extensive information-- a name (47\%), email address (44\%), and institutional affiliation (40\%)-- and not collecting any (47\%).
+When asked a similar question, 67\% of data managers were most interested in discipline.
+Half of the repositories collect extensive information-- a name (47\%), email address (44\%), and institutional affiliation (40\%)-- and half (47\%) do not collect any.
 
 
 % ==============================================================
 % Discovery & use
 % ==============================================================
 
-Compared to how scientists share data they have created, how and where they search for data in their role as (re-)users is not well understood.
-We asked researchers how likely they would be to use each of five possible strategies (shown in Figure \ref{fig:results}a).
-No single method predominated.
-A 63\% majority said that they would ``definitely'' use more than one strategy, and three strategies would definitely be used by most respondents: searching via references in the literature (59\%), a discipline-specific database (58\%), or a general purpose search engine (51\%). 
-When asked to name particular sources, the general-purpose repository Dryad (\url{http://datadryad.org/}) was most frequently mentioned ($n=16$); Google and ``journal articles'' were tied for second ($n=14$). 
-Respondents were unlikely to `crowd-source' data discovery via open inquiries on social media (42\% ``no chance'') or discussion forums (40\% no chance).
-However, direct inquiries to knowledgeable colleagues are probably more common, and were a relatively frequently mentioned write-in source ($n=12$).
+Relative to data sharing, where and how researchers search for data to (re-)use is poorly understood.
+We asked researchers how likely they would be to use each of five strategies (shown in Figure \ref{fig:results}a); no single method predominated.
+Three different strategies would definitely be used by most respondents: searching via references in the literature (59\%), a discipline-specific database (58\%), or a general purpose search engine (51\%). 
+Taken together, 63\% of respondents would ``definitely'' employ two or more strategies.
+When we asked respondents to write-in particular sources, they most frequently ($n=16$) mentioned the general-purpose repository Dryad (\url{http://datadryad.org/}); Google and ``journal articles'' tied for second ($n=14$). 
+Respondents generally did not `crowd-source' data discovery via open inquiries on social media (42\% ``no chance'') or discussion forums (40\% no chance).
+However, direct inquiries (by email or in person) to knowledgeable colleagues are probably common, and were a frequent ($n=12$) write-in discovery source.
 
-We next sought to characterize the role that public data plays in in respondents research processes by asking how frequently they used public data to generate ideas/hypotheses at the outset, to reach the main conclusion of a paper, or to support the main conclusion of a paper (Figure \ref{fig:results}b).
-An overwhelming 96\% of respondents at least ``occasionally'' use public data in some capacity, and a 56\% majority used public data ``often.''
-Furthermore much of this use is central to research, 28\% often and 42\% occasionally use public data to reach the main conclusions of a paper, although use for idea generation (41\% often, 46\% occasionally) and support (39\% often, 47\% occasionally) were higher.
+We next sought to characterize how our respondents use public data once they have found it.
+We asked how frequently they used public data early (to generate ideas/hypotheses), as the central piece (to reach the main conclusion), or late (to support the main conclusion) in their research process (Figure \ref{fig:results}b).
+An overwhelming 96\% of respondents at least ``occasionally'' use public data, and a 56\% majority used public data ``often.''
+Furthermore, although use early (41\% often, 46\% occasionally) and late (39\% often, 47\% occasionally) were higher, much of this use is central to research-- 28\% often and 42\% occasionally use public data to reach central conclusions.
 
 
 % ==============================================================
 % Data impact 
 % ==============================================================
 
-Among the potential audiences for data metrics-- administrators, funders, data managers-- dataset creators themselves are undoubtedly the most invested.
-Metrics can provide researchers a sense of what their data is being used for and reassure them that it is actually being used and therefore that sharing is worthwhile.
-Secondarily, data managers have a stake in knowing about use of their data to justify funding and tailor services.
-We asked both groups what metrics of impact they would most be interested in knowing about their data. 
+Among the potential audiences for data metrics-- administrators, funders, data managers-- the most invested are undoubtedly dataset creators.
+In addition to providing researchers with a sense of what their data is being used for, metrics can reassure them that it is actually being used and that the effort to share it was not wasted.
+Secondarily, data managers have a stake in knowing about use of their data to tailor services and justify funding. 
+To learn about the immediate interests of these groups, we asked them to rank several potential metrics of impact. 
 
-Both groups still measure scholarly prestige in citations.
-When asked to rank potential information about data use, 85\% of researchers (Figure \ref{fig:results}c) and 61\% of data managers chose citations as the most interesting thing to know about their data. 
-The preference of researchers is consistent with previous surveys \cite{kratz_researcher_2015}.
-Download count was a consistent second choice of researchers (by 64\%). 
-Landing page views were ranked last by more than half of both researchers and data managers.
+Both groups measure scholarly prestige in citations: 85\% of researchers (Figure \ref{fig:results}c) and 61\% of data managers ranked citations as the most interesting metric. 
+In the case of researchers, this preference is consistent with our earlier survey \cite{kratz_researcher_2015}.
+Most researchers (64\%) ranked downloads second. 
+Majorities of both researchers and data managers ranked landing page views last.
 
-As a practical matter, it is important to understand what metrics are already being tracked and exposed by repositories(Figure \ref{fig:results}d). 
+For practical reasons, we can not implement data metrics without understanding what metrics of data use repositories collect (Figure \ref{fig:results}d). 
 Most repositories track downloads (85\%) and landing page views (66\%). 
-However, only 35\% of the repositories that track downloads show them on the landing page or provide them through a program interface; this ratio is roughly similar for all of the metrics we asked about. 
-Despite the interest in citation counts, relatively few repositories (23\%) track them, presumably because this is much more challenging. 
+But, only 30\% display download counts (and 27\% page views) on the landing page or provide them through a program interface.
+A 2013 survey of 35 repositories arrived at a similar figure: 20\% of those displayed dataset level metrics \cite{costas_value_2013}.
+Across the board, the metrics in our survey were displayed by only one-third of the repositories that track them.
+Despite high interest in citation counts, relatively few repositories (23\%) track them, presumably because this is much more challenging. 
 
 % ==============================================================
 % Conclusions & future work 
 % ==============================================================
 
-While citation counts are the gold standard, their current usefulness suffers from the major limitation that datasets are rarely cited formally.
-The clearest illustration of current practice is a 2011 survey of social science papers that found that only 17\% cited the dataset with at least the title in the reference list, roughly the same as in 1995 \cite{sieber_not_1995, mooney_citing_2011}. 
-However, there are reasons for optimism.
-Data creators strongly endorse formal data citation: 95\% of respondents to a 2011 DataONE survey agreed that formal citation was a fair condition for data sharing, as did 87\% of astrobiologists in a follow-up survey \cite{tenopir_data_2011, aydinoglu_data_2014}. 
+Citations are the coin of the academic realm, but their present usefulness for data is limited because datasets are rarely cited formally.
+A 2011 survey of social science papers best illuminates current practice: only 17\% of papers that used published data cited it in the reference list, roughly the percentage as in 1995 \cite{sieber_not_1995, mooney_citing_2011}. 
+However, we do believe that the situation will improve. 
+Researchers strongly favor formal data citation.
+In a cross-disciplinary 2011 survey, 95\% of respondents agreed that formal citation is a fair condition for data sharing, as did 87\% of astrobiologists in a follow-up survey \cite{tenopir_data_2011, aydinoglu_data_2014}. 
 Citation ``in the references like normal publications'' is the preferred method of receiving credit for data sharing by 71\% of biodiversity researchers and by 75\% of respondents to our earlier survey \cite{enke_users_2012, kratz_researcher_2015}.
-And, in 2014, the scholarly communication community recognized the consensus that data used in an article should be cited formally in the reference list with the Joint Declaration of Data Citation Principles (\url{http://www.force11.org/node/4769}).
-A number of organizations like DataCite, Future of Research Communication and e-Scholarship, and the Research Data Alliance are actively working to overcome the technical and cultural obstacles to widespread data citation.
+In 2014, the scholarly communication community arrived at a Joint Declaration of Data Citation Principles (\url{http://www.force11.org/node/4769}) with formal citation at its core. 
+The Joint Declaration has since been endorsed by 91 repositories, publishers, and scholarly organizations-- including DataCite, the Research Data Alliance, and Nature Publishing Group (\url{http://blogs.nature.com/scientificdata/2014/03/24/endorsing-the-joint-declaration-of-data-citation-principles/}).
+\emph{Scientific Data} data descriptors, for example, are formatted in accordance with the Joint Declaration, and each includes at least one formal data citation.
 
-Unlike citations, repositories can easily track dataset landing page views and downloads.
-Page views are considered to be of little value by researchers and data managers, but downloads are more highly regarded; it stands to reason that downloading a dataset represents a higher level of engagement that simply viewing the landing page.
-For researchers, downloads were a very consistent second-choice to citations.
-Furthermore, our previous work suggests that although the preference for citations is consistent, the gap in perceived value between the two metrics is relatively narrow \cite{kratz_researcher_2015}.
-Downloads are already widely tracked by repositories, and we strongly recommend that more repositories make them public.
+In contrast to citations, repositories can easily track data landing page views and downloads today.
+Page views are of little value to researchers or data managers, but downloads are more highly regarded.
+(It stands to reason that downloading a dataset represents a higher level of engagement that viewing a landing page.)
+Researchers consistently ranked downloads as their second-choice metric.
+Our previous survey suggests that, the gap in perceived value between citations and downloads is surprisingly narrow \cite{kratz_researcher_2015}.
+Most repositories already track downloads, and we strongly recommend that more of them make download counts public.
 
-These results offer clear guidance to Making Data Count and other projects seeking to develop data metrics.
-Firstly, page views and social media activity can safely be deemphasized because of low status and current lack of data-related activity respectively.
-Citations should be emphasized and collected as best as possible.
-An approach to working in the current inconsistent citation environment that we are taking in Making Data Count is to search the full text of PLOS articles for dataset identifiers.
-Downloads should also be emphasized as, at present, a happy medium: both reasonably valuable and reasonably easy to measure.
-However, practices around science data and communication are in flux, and we must be prepared to reevaluate any initial set of metrics and to accommodate new metrics to capture new research and communication practices.
+This survey provides several clear points of guidance for Making Data Count and anyone invested in data metrics.
+In the short-term, page views and social media activity can be deemphasized because of low status and lack of data-related activity respectively.
+While challenging, citations should be emphasized and collected as best as possible.
+One approach that we are taking in Making Data Count is to search the full text of PLOS articles for informally cited datasets.
+Downloads should be emphasized as, at present, a happy medium: both reasonably valuable and reasonably easy to measure.
+
+
+
+In the longer-term, we expect data citation practices to improve and the activities captured by altmetrics to grow in popularity.
+
+However, research communication is in flux, and 
+
+
+Although we believe that these results provide a useful picture of the current situation, research and communication practices are in flux
 
 
 \section*{Acknowledgements}
@@ -168,14 +185,14 @@ The author(s) declare no competing financial interests.
 
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=3.25in]{MDC_Figure_rough_sketch.png}
+\includegraphics[width=3.25in]{MDC_Figure.png}
 \end{center}
 \caption{
 {\bf Researchers value citations and download counts; most repositories track downloads but few expose them.}
-Researchers ($n=247$) indicated (a.) what methods they use to discover useful data and (b.) how they subsequently use it, and (c.) ranked their relative interest in four possible metrics of impact.
-Data managers ($n=71$) (d.) reported which of these metrics their repositories track and expose.
+Researchers ($n=247$) indicated (a.) how they search for data and (b.) how they subsequently use it; and (c.) ranked their relative interest in four possible metrics of impact.
+Data managers ($n=71$) (d.) reported which of metrics their repositories track and expose.
 White dots show the mean on a scale of 1-3 (a. and b.) or 1-4 (c.).
-Error bars depict 95\% confidence intervals calculated by basic bootstrap with 10,000 resamplings. 
+All error bars depict 95\% confidence intervals calculated by basic bootstrap with 10,000 resamplings. 
 }
 \label{fig:results}
 \end{figure}
