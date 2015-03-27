@@ -123,8 +123,8 @@ Despite high interest in citation counts, relatively few repositories (23\%) tra
 % Conclusions & future work 
 % ==============================================================
 
-Citations are the coin of the academic realm, but their present usefulness for data is limited because datasets are rarely cited formally.
-A 2011 survey of social science papers best illuminates current practice: only 17\% of papers that used published data cited it in the reference list, roughly the percentage as in 1995 \cite{sieber_not_1995, mooney_citing_2011}. 
+Citations are the coin of the academic realm, but their present usefulness for data is limited because datasets are rarely cited formally \cite{robinson-garcia_analyzing_2015}.
+A 2011 survey of social science papers best illuminates current practice: only 17\% of papers that used published data cited it in the reference list, roughly the same percentage as in 1995 \cite{sieber_not_1995, mooney_citing_2011}. 
 However, we do believe that the situation will improve. 
 Researchers strongly favor formal data citation.
 In a cross-disciplinary 2011 survey, 95\% of respondents agreed that formal citation is a fair condition for data sharing, as did 87\% of astrobiologists in a follow-up survey \cite{tenopir_data_2011, aydinoglu_data_2014}. 
@@ -145,15 +145,7 @@ In the short-term, page views and social media activity can be deemphasized beca
 While challenging, citations should be emphasized and collected as best as possible.
 One approach that we are taking in Making Data Count is to search the full text of PLOS articles for informally cited datasets.
 Downloads should be emphasized as, at present, a happy medium: both reasonably valuable and reasonably easy to measure.
-
-
-
-In the longer-term, we expect data citation practices to improve and the activities captured by altmetrics to grow in popularity.
-
-However, research communication is in flux, and 
-
-
-Although we believe that these results provide a useful picture of the current situation, research and communication practices are in flux
+While we would be pleased to see more sophisticated schemes to apportion scholarly credit and facilitate knowledge discovery \cite{ingwersen_indicators_2011, ding_enititymetrics_2013, katz_transitive_2014} catch on, these straightforward metrics fulfill an immediate need to quantify data impact in a way that all of the stakeholders-- including data managers, administrators, and researchers-- can understand today.
 
 
 \section*{Acknowledgements}
@@ -197,11 +189,19 @@ All error bars depict 95\% confidence intervals calculated by basic bootstrap wi
 \label{fig:results}
 \end{figure}
 
-\begin{thebibliography}{1}
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\texttt{#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\providecommand{\bibinfo}[2]{#2}
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
 \providecommand{\eprint}[2][]{\url{#2}}
 
 \bibitem{priem_altmetrics_2012}
@@ -209,64 +209,110 @@ Priem J, Piwowar HA, Hemminger BM (2012) Altmetrics in the wild: {Using} social
   media to explore scholarly impact.
 \newblock {arXiv} e-print 1203.4745.
 \newblock \urlprefix\url{http://arxiv.org/abs/1203.4745}.
+\bibAnnoteFile{priem_altmetrics_2012}
 
 \bibitem{pfeiffenberger_earth_2011}
 Pfeiffenberger H, Carlson D (2011) "{Earth} {System} {Science} {Data}" ({ESSD})
-  : {A} {Peer} {Reviewed} {Journal} for {Publication} of {Data}.
+  — {A} {Peer} {Reviewed} {Journal} for {Publication} of {Data}.
 \newblock D-Lib Magazine 17.
+\bibAnnoteFile{pfeiffenberger_earth_2011}
 
 \bibitem{editors_more_2014}
 {Editors} (2014) More bang for your byte.
 \newblock Scientific Data 1.
+\bibAnnoteFile{editors_more_2014}
+
+\bibitem{kratz_researcher_2015}
+Kratz JE, Strasser C (2015) Researcher {Perspectives} on {Publication} and
+  {Peer} {Review} of {Data}.
+\newblock PLoS ONE 10: e0117619.
+\bibAnnoteFile{kratz_researcher_2015}
+
+\bibitem{kratz_making_2015}
+Kratz JE, Strasser C (2015) Making {Data} {Count} survey responses.
+\newblock University of California, Office of the President .
+\bibAnnoteFile{kratz_making_2015}
 
 \bibitem{tenopir_data_2011}
 Tenopir C, Allard S, Douglass K, Aydinoglu AU, Wu L, et~al. (2011) Data
   {Sharing} by {Scientists}: {Practices} and {Perceptions}.
 \newblock PLoS ONE 6: e21101.
+\bibAnnoteFile{tenopir_data_2011}
 
 \bibitem{akers_disciplinary_2013}
 Akers KG, Doty J (2013) Disciplinary differences in faculty research data
   management practices and perspectives.
 \newblock International Journal of Digital Curation 8: 5--26.
+\bibAnnoteFile{akers_disciplinary_2013}
 
 \bibitem{wallis_if_2013}
 Wallis JC, Rolando E, Borgman CL (2013) If {We} {Share} {Data}, {Will} {Anyone}
   {Use} {Them}? {Data} {Sharing} and {Reuse} in the {Long} {Tail} of {Science}
   and {Technology}.
 \newblock PLoS ONE 8: e67332.
+\bibAnnoteFile{wallis_if_2013}
 
 \bibitem{aydinoglu_data_2014}
 Aydinoglu AU, Suomela T, Malone J (2014) Data {Management} in {Astrobiology}:
   {Challenges} and {Opportunities} for an {Interdisciplinary} {Community}.
 \newblock Astrobiology 14: 451--461.
+\bibAnnoteFile{aydinoglu_data_2014}
 
-\bibitem{kratz_researcher_2015}
-Kratz JE, Strasser C (2015) Researcher {Perspectives} on {Publication} and
-  {Peer} {Review} of {Data}.
-\newblock PLoS ONE 10: e0117619.
+\bibitem{bobrow_establishing_2014}
+Bobrow M, Banks J, Burton P, Smith GD, Eeles R, et~al. (2014) Establishing
+  {Incentives} and {Changing} {Cultures} to {Support} {Data} {Access}.
+\newblock Technical report, Wellcome Trust.
+\newblock
+  \urlprefix\url{http://www.wellcome.ac.uk/stellent/groups/corporatesite/@msh_peda/documents/web_document/wtp056495.pdf}.
+\newblock Expert Advisory Group on Data Access.
+\bibAnnoteFile{bobrow_establishing_2014}
 
-\bibitem{kratz_making_2015}
-Kratz JE, Strasser C (2015) Data from Making Data Count.
-\newblock placeholder.
+\bibitem{costas_value_2013}
+Costas R, Meijer I, Zahedi Z, Wouters P (2013) The {Value} of {Research} {Data}
+  {Metrics} for datasets from a cultural and technical point of view.
+\newblock Technical report.
+\newblock \urlprefix\url{http://www.knowledge-exchange.info/datametrics}.
+\bibAnnoteFile{costas_value_2013}
+
+\bibitem{robinson-garcia_analyzing_2015}
+Robinson-Garcia N, Jiménez-Contreras E, Torres-Salinas D (2015) Analyzing data
+  citation practices according to the {Data} {Citation} {Index}.
+\newblock arXiv:150106285 [cs] .
+\bibAnnoteFile{robinson-garcia_analyzing_2015}
 
 \bibitem{sieber_not_1995}
 Sieber PJE, Trumbo BE (1995) ({Not}) giving credit where credit is due:
   {Citation} of data sets.
 \newblock Science and Engineering Ethics 1: 11--20.
+\bibAnnoteFile{sieber_not_1995}
 
 \bibitem{mooney_citing_2011}
 Mooney H (2011) Citing data sources in the social sciences: do authors do it?
 \newblock Learned Publishing 24: 99--108.
+\bibAnnoteFile{mooney_citing_2011}
 
 \bibitem{enke_users_2012}
 Enke N, Thessen A, Bach K, Bendix J, Seeger B, et~al. (2012) The user's view on
-  biodiversity data sharing: {Investigating} facts of acceptance and
-  requirements to realize a sustainable use of research data.
+  biodiversity data sharing — {Investigating} facts of acceptance and
+  requirements to realize a sustainable use of research data —.
 \newblock Ecological Informatics 11: 25--33.
+\bibAnnoteFile{enke_users_2012}
+
+\bibitem{ingwersen_indicators_2011}
+Ingwersen P, Chavan V (2011) Indicators for the {Data} {Usage} {Index} ({DUI}):
+  an incentive for publishing primary biodiversity data through global
+  information infrastructure.
+\newblock BMC Bioinformatics 12: S3.
+\bibAnnoteFile{ingwersen_indicators_2011}
+
+\bibitem{katz_transitive_2014}
+Katz DS (2014) Transitive {Credit} as a {Means} to {Address} {Social} and
+  {Technological} {Concerns} {Stemming} from {Citation} and {Attribution} of
+  {Digital} {Products}.
+\newblock Journal of Open Research Software 2: e20.
+\bibAnnoteFile{katz_transitive_2014}
 
 \end{thebibliography}
-
-%\bibliography{Comment}
 
 
 

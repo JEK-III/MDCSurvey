@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MDC_writeup.aux
+The style file: plos2009.bst
+Database file #1: MDC_writeup.bib
+Warning--I didn't find a database entry for "ding_enititymetrics_2013"
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--missing institution in priem_altmetrics_2012
+Warning--missing institution in costas_value_2013
+You've used 17 entries,
+            2441 wiz_defined-function locations,
+            661 strings with 9094 characters,
+and the built_in function-call counts, 12382 in all, are:
+= -- 1136
+> -- 196
+< -- 1
++ -- 98
+- -- 49
+* -- 1040
+:= -- 1504
+add.period$ -- 38
+call.type$ -- 17
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 36
+duplicate$ -- 1274
+empty$ -- 1274
+format.name$ -- 63
+if$ -- 2717
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 166
+newline$ -- 104
+num.names$ -- 17
+pop$ -- 200
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 98
+stack$ -- 0
+substring$ -- 1677
+swap$ -- 322
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 90
+width$ -- 19
+write$ -- 205
+(There were 3 warnings)
