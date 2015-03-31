@@ -1,0 +1,61 @@
+Authors should provide a cover letter that includes the affiliation and contact information for the corresponding author, and that briefly explains why the work should be considered appropriate for Scientific Data. 
+
+Authors should indicate whether they have had any prior discussions with a Scientific Data Editorial Board Member about the work described in the manuscript.
+
+
+http://dash.ucop.edu/xtf/view?docId=ucop/ark%2B%3Db5060%3Dd8h59d/mrt-datacite.xml
+
+
+
+* comment
+
+* data metrics: probably don't have to justify
+
+* done for MDC, but not deeply tailored for what we're doing: should be informative for anyone
+* expands on an earlier survey, but totally its own thing.
+
+* practical conclusions for the near-term
+	* citations are highly valued, but rarely collected
+	* download counts are pretty highly valued and widely collected
+	* page views are garbage
+	
+* data is already available via Dash
+
+* we discussed the manuscript and showed a draft to Andrew Hufton
+
+
+on an NSF-funded project with PLOS and DataONE to develop a
+Dataset-Level Metrics tool. As part of the research phase of this
+project, we have conducted a survey of data managers and researchers about data metrics.
+We think that the results of this survey are relevant to a broader
+community and would be of wide interest.
+
+We asked ~250 researchers how they discover and re-use data, how they
+assess the quality and impact of other researchers, and what they
+would like to know about their own data. The questions for ~75 data
+managers focused on what metrics they currently collect, what they
+make public, and what they would like to know. The replies affirm the
+importance of citation counts for both groups, although few repositories track them.
+Download counts are a clear second-choice for researchers that most
+repositories do t
+
+Dear Editors,
+
+Attached you will find a Comment piece on metrics of dataset impact.
+The need for data metrics is widely recognized and is an area of active work by a number of groups.
+We are participating in Making Data Count, an NSF-funded project with PLOS and DataONE to develop a Dataset-Level Metrics tool. 
+During the research phase of the project, we conducted a pair of surveys of data managers and researchers about data metrics.
+We think that the results are relevant well beyond the project and would be of wide interest.
+
+We asked ~250 researchers how they discover and re-use data, how they assess the quality and impact of other researchers, and what they would like to know about their own data. 
+The questions for ~75 data managers focused on what metrics they currently collect, what they make public, and what they would like to know. 
+From the replies, we can draw conclusions about the value and near-term practicality of various potential metrics.
+For instance, citation counts are the metric of choice for both groups, but few repositories currently track them.
+Download counts are a clear second-choice for researchers that most repositories do already track.
+However, only ~1/3 of the repositories that count downloads make the counts public; increasing this fraction would be an 'easy win' for data metrics.
+
+We discussed the piece and shared an earlier draft with Andrew Hufton.
+That discussion resulted in a number of revisions, including better contextualization of this work relative to a survey we conducted previously and published elsewhere.
+The underlying survey responses are publicly available (with a few potentially identifying questions redacted) from our repository (doi:10.5060/D8H59D or http://dash.ucop.edu/xtf/view?docId=ucop/ark%2B%3Db5060%3Dd8h59d/mrt-datacite.xml).
+
+

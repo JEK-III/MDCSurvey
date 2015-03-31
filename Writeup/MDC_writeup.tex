@@ -1,22 +1,28 @@
 \documentclass[english]{article}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
 \usepackage{babel}
-
+\usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
-
-% Use the PLoS provided bibtex style temporarily
-\bibliographystyle{plos2009}
+\newcommand{\scidatalogo}{\includegraphics[height=36pt]{SciData_logo.jpg}}
+\newcommand{\overleaflogo}{\includegraphics[height=36pt]{Overleaf-logo-300dpi.png}}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{40pt} 
+\lhead{\textsc{\scidatalogo}}
+\rhead{\textsc{\overleaflogo}}
 
 \begin{document}
 
 \title{Making Data Count}
-
-
 \author{John Kratz\textsuperscript{1{*}}, Carly Strasser\textsuperscript{1}}
 
 \maketitle
+\thispagestyle{fancy}
+
 1. California Digital Library 
 {*}corresponding author(s): John Kratz (John.Kratz@ucop.edu)
 
@@ -29,9 +35,9 @@
 
 Data undergirds all of science and published data should be recognized as valuable scholarship, but scholarly recognition relies on accepted metrics of significance-- which data lacks.
 The impact of a journal article has traditionally been estimated by counting the number of subsequent articles that cite it. 
-A suite of internet-based alternative metrics (``altmetrics'') seek to provide faster assessment and to capture other kinds of impact \cite{priem_altmetrics_2012}.
+A suite of web-based alternative metrics (``altmetrics'') seek to provide faster assessment and to capture other kinds of impact \cite{priem_altmetrics_2012}.
 Article-centered metrics like these can measure data by proxy, via data descriptor articles in journals like \textit{Earth Systems Science Data} or \textit{Scientific Data}\cite{pfeiffenberger_earth_2011, editors_more_2014}.
-Alternately, many article metrics could also apply directly to datasets published in online databases or repositories.
+Alternately, many article metrics could be applied directly to datasets published in online databases or repositories.
 However, the translation is not always straightforward; opening a web page, downloading, or citing all mean different things if the target is a dataset rather than an article.
 
 Several groups are investigating traditional, alternative, and novel metrics for data. 
@@ -84,7 +90,7 @@ Half of the repositories collect extensive information-- a name (47\%), email ad
 
 % ==============================================================
 % Discovery & use
-% ==============================================================
+% ==============================================================p
 
 Relative to data sharing, where and how researchers search for data to (re-)use is poorly understood.
 We asked researchers how likely they would be to use each of five strategies (shown in Figure \ref{fig:results}a); no single method predominated.
@@ -121,6 +127,7 @@ A 2013 survey of 35 repositories arrived at a similar figure: 20\% of those disp
 Across the board, the metrics in our survey were displayed by only one-third of the repositories that track them.
 Despite high interest in citation counts, relatively few repositories (23\%) track them, presumably because this is much more challenging. 
 
+
 % ==============================================================
 % Conclusions & future work 
 % ==============================================================
@@ -147,7 +154,7 @@ In the short-term, page views and social media activity can be deemphasized beca
 While challenging, citations should be emphasized and collected as best as possible.
 One approach that we are taking in Making Data Count is to search the full text of PLOS articles for informally cited datasets.
 Downloads should be emphasized as, at present, a happy medium: both reasonably valuable and reasonably easy to measure.
-While we would be pleased to see more sophisticated schemes to apportion scholarly credit and facilitate knowledge discovery \cite{ingwersen_indicators_2011, ding_enititymetrics_2013, katz_transitive_2014} catch on, these straightforward metrics fulfill an immediate need to quantify data impact in a way that all of the stakeholders-- including data managers, administrators, and researchers-- can understand today.
+While we would be pleased to see more sophisticated schemes to apportion scholarly credit and facilitate knowledge discovery \cite{ingwersen_indicators_2011, ding_entitymetrics_2013, katz_transitive_2014} catch on, these straightforward metrics fulfill an immediate need to quantify data impact in a way that all of the stakeholders-- including data managers, administrators, and researchers-- can understand today.
 
 
 \section*{Acknowledgements}
@@ -157,29 +164,14 @@ Making Data Count is funded by National Science Foundation (NSF) grant number 14
 
 \section*{Competing financial interests}
 
-
 The author(s) declare no competing financial interests.
 
 
-\section*{Figures Legends}
-
-% Figure should be referred to using a consistent numbering scheme through
-% the entire Data Descriptor. For initial submissions, authors may choose
-% to supply this document as a single PDF with embedded figures, but
-% separate figure image files must be provided for revisions and accepted
-% manuscripts. In most cases, a Data Descriptor should not contain more
-% than three figures, but more may be allowed when needed. We discourage
-% the inclusion of figures in the Supplementary Information \textendash{}
-% all key figures should be included here in the main Figure section. 
-
-% Figure legends begin with a brief title sentence for the whole figure
-% and continue with a short description of what is shown in each panel,
-% as well as explaining any symbols used. Legend must total no more
-% than 350 words, and may contain literature references. 
+%\section*{Figures Legends}
 
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=3.25in]{MDC_Figure.png}
+\includegraphics[width=4.8in]{MDC_Figure.png}
 \end{center}
 \caption{
 {\bf Researchers value citations and download counts; most repositories track downloads but few expose them.}
@@ -191,131 +183,159 @@ All error bars depict 95\% confidence intervals calculated by basic bootstrap wi
 \label{fig:results}
 \end{figure}
 
-\begin{thebibliography}{10}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
-  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
-  \urlstyle{rm}\Url}\fi
-\providecommand{\bibAnnoteFile}[1]{%
-  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
-  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
-\providecommand{\bibAnnote}[2]{%
-  \begin{quotation}\noindent\textsc{Key:} #1\\
-  \textsc{Annotation:}\ #2\end{quotation}}
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
 
 \bibitem{priem_altmetrics_2012}
-Priem J, Piwowar HA, Hemminger BM (2012) Altmetrics in the wild: {Using} social
-  media to explore scholarly impact.
-\newblock {arXiv} e-print 1203.4745.
-\newblock \urlprefix\url{http://arxiv.org/abs/1203.4745}.
-\bibAnnoteFile{priem_altmetrics_2012}
-
+\bibinfo{author}{Priem, J.}, \bibinfo{author}{Piwowar, H.A.}, 
+	\bibinfo{author}{Hemminger, B.M.}
+\newblock \bibinfo{title}{{Altmetrics in the wild: Using social media to explore scholarly impact.}}
+\newblock \emph{\bibinfo{journal}{arXiv}}:1203.4745 [cs.DL].
+ (\bibinfo{year}{2012}).
+ 
 \bibitem{pfeiffenberger_earth_2011}
-Pfeiffenberger H, Carlson D (2011) "{Earth} {System} {Science} {Data}" ({ESSD})
-  — {A} {Peer} {Reviewed} {Journal} for {Publication} of {Data}.
-\newblock D-Lib Magazine 17.
-\bibAnnoteFile{pfeiffenberger_earth_2011}
+\bibinfo{author}{Pfeiffenberger, H.}, \bibinfo{author}{Carlson, D.} 
+\newblock \bibinfo{title}{{"Earth System Science Data" (ESSD)-- A peer reviewed journal for publication of data.}}
+\newblock \emph{\bibinfo{journal}{D-Lib Magazine}}
+	\bibinfo{pages}{17}
+	(\bibinfo{year}{2011}).
 
 \bibitem{editors_more_2014}
-{Editors} (2014) More bang for your byte.
+\newblock \bibinfo{title}{{More bang for your byte.}}
 \newblock Scientific Data 1.
-\bibAnnoteFile{editors_more_2014}
+\newblock \emph{\bibinfo{journal}{Scientific Data}}
+  \textbf{\bibinfo{volume}{1}}, \bibinfo{pages}{140010}
+	(\bibinfo{year}{2014}).
 
 \bibitem{kratz_researcher_2015}
-Kratz JE, Strasser C (2015) Researcher {Perspectives} on {Publication} and
-  {Peer} {Review} of {Data}.
-\newblock PLoS ONE 10: e0117619.
-\bibAnnoteFile{kratz_researcher_2015}
+\bibinfo{author}{Kratz. J.E.}, \bibinfo{author}{Strasser, C.}
+\newblock \bibinfo{title}{{Researcher perspectives on publication and peer review of data.}}
+\newblock \emph{\bibinfo{journal}{PLoS ONE}} 
+	\textbf{\bibinfo{volume}{10}}, \bibinfo{pages}{e0117619}
+    (\bibinfo{year}{2015}).
 
 \bibitem{kratz_making_2015}
-Kratz JE, Strasser C (2015) Making {Data} {Count} survey responses.
-\newblock University of California, Office of the President .
-\bibAnnoteFile{kratz_making_2015}
+\bibinfo{author}{Kratz, J.E.}, \bibinfo{author}{Strasser, C.}
+\newblock \bibinfo{title}{{Making Data Count survey responses.}}
+\newblock \emph{\bibinfo{journal}{University of California, Office of the President}}
+	\url{http://www.dx.doi.org/10.5060/D8H59D}
+    (\bibinfo{year}{2015}).
 
 \bibitem{tenopir_data_2011}
-Tenopir C, Allard S, Douglass K, Aydinoglu AU, Wu L, et~al. (2011) Data
-  {Sharing} by {Scientists}: {Practices} and {Perceptions}.
-\newblock PLoS ONE 6: e21101.
-\bibAnnoteFile{tenopir_data_2011}
+\bibinfo{author}{Tenopir, C.}, \bibinfo{author}{Allard, S.}, 
+	\bibinfo{author}{Douglass, K.}, \bibinfo{author}{Aydinoglu, A.U.}, 
+	\bibinfo{author}{Wu, L.} \emph{et~al.}
+\newblock \bibinfo{title}{{Data sharing by scientists: practices and perceptions.}}
+\newblock \emph{\bibinfo{journal}{PLoS ONE}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{e21101}
+  (\bibinfo{year}{2011}).
 
 \bibitem{akers_disciplinary_2013}
-Akers KG, Doty J (2013) Disciplinary differences in faculty research data
-  management practices and perspectives.
-\newblock International Journal of Digital Curation 8: 5--26.
-\bibAnnoteFile{akers_disciplinary_2013}
+\bibinfo{author}{Akers, K.G.}, {\bibinfo{author}{Doty, J.}
+\newblock \bibinfo{title}{{Disciplinary differences in faculty research data management practices and perspectives.}}
+\newblock \emph{\bibinfo{journal}{International Journal of Digital Curation}} 8: 5--26.
+  \textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{5--26}
+  (\bibinfo{year}{2013}).
 
 \bibitem{wallis_if_2013}
-Wallis JC, Rolando E, Borgman CL (2013) If {We} {Share} {Data}, {Will} {Anyone}
-  {Use} {Them}? {Data} {Sharing} and {Reuse} in the {Long} {Tail} of {Science}
-  and {Technology}.
-\newblock PLoS ONE 8: e67332.
-\bibAnnoteFile{wallis_if_2013}
+\bibinfo{author}{Wallis, J.C.}, \bibinfo{author}{Rolando, E.}, 
+	\bibinfo{author}{Borgman, C.L.}
+ \newblock \bibinfo{title}{{If we share data, will anyone use them? 
+ 	Data sharing and reuse in the long tail of science and technology.}}
+\newblock \emph{\bibinfo{journal}{PLoS ONE}} 
+	\textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{e67332}
+	(\bibinfo{year}{2013}).
 
 \bibitem{aydinoglu_data_2014}
-Aydinoglu AU, Suomela T, Malone J (2014) Data {Management} in {Astrobiology}:
-  {Challenges} and {Opportunities} for an {Interdisciplinary} {Community}.
-\newblock Astrobiology 14: 451--461.
-\bibAnnoteFile{aydinoglu_data_2014}
+\bibinfo{author}{Aydinoglu, A.U.}, \bibinfo{author}{Suomela, T.},
+	 \bibinfo{author}{Malone, J.} 
+\newblock \bibinfo{title}{{Data management in astrobiology: 
+	challenges and opportunities for an interdisciplinary community.}}
+\newblock \emph{\bibinfo{journal}{Astrobiology}} 
+	textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{451--461}
+	(\bibinfo{year}{2014}).
 
 \bibitem{bobrow_establishing_2014}
-Bobrow M, Banks J, Burton P, Smith GD, Eeles R, et~al. (2014) Establishing
-  {Incentives} and {Changing} {Cultures} to {Support} {Data} {Access}.
-\newblock Technical report, Wellcome Trust.
-\newblock
-  \urlprefix\url{http://www.wellcome.ac.uk/stellent/groups/corporatesite/@msh_peda/documents/web_document/wtp056495.pdf}.
-\newblock Expert Advisory Group on Data Access.
-\bibAnnoteFile{bobrow_establishing_2014}
-
+\bibinfo{author}{Bobrow, M.}, \bibinfo{author}{Banks, J.}, 
+	\bibinfo{author}{Burton, P.}, \bibinfo{author}{Smith, G.D.}, 
+		\bibinfo{author}{Eeles, R.} \emph{et~al.}
+\newblock \bibinfo{title}{{Establishing incentives and changing cultures to support data access.}}
+\newblock \emph{}\bibinfo{institution}{Wellcome Trust}} 
+	\url{http://www.wellcome.ac.uk/stellent/groups/corporatesite/@msh_peda/documents/web_document/wtp056495.pdf}
+	(\bibinfo{year}{2014}).
+  
 \bibitem{costas_value_2013}
-Costas R, Meijer I, Zahedi Z, Wouters P (2013) The {Value} of {Research} {Data}
-  {Metrics} for datasets from a cultural and technical point of view.
-\newblock Technical report.
-\newblock \urlprefix\url{http://www.knowledge-exchange.info/datametrics}.
-\bibAnnoteFile{costas_value_2013}
+\bibinfo{author}{Costas, R.}, \bibinfo{author}{Meijer, I.}, 
+	\bibinfo{author}{Zahedi, Z.}, \bibinfo{author}{Wouters, P.}
+\newblock \bibinfo{title}{{The value of research data: 
+	metrics for datasets from a cultural and technical point of view.}}
+\newblock \emph{\bibinfo{institution}Knowledge Exchange}
+	\url{http://www.knowledge-exchange.info/datametrics}
+	(\bibinfo{year}{2013}).
 
 \bibitem{robinson-garcia_analyzing_2015}
-Robinson-Garcia N, Jiménez-Contreras E, Torres-Salinas D (2015) Analyzing data
-  citation practices according to the {Data} {Citation} {Index}.
-\newblock arXiv:150106285 [cs] .
-\bibAnnoteFile{robinson-garcia_analyzing_2015}
+\bibinfo{author}{Robinson-Garcia, N.}, \bibinfo{author}{Jiménez-Contreras, E.}, 
+	\bibinfo{author}{Torres-Salinas, D.}
+\newblock \bibinfo{title}{{Analyzing data citation practices according to the Data Citation Index.}}
+\newblock \emph{\bibinfo{journal}{arXiv}}:150106285 [cs]
+	(\bibinfo{year}{2015}).
 
 \bibitem{sieber_not_1995}
-Sieber PJE, Trumbo BE (1995) ({Not}) giving credit where credit is due:
-  {Citation} of data sets.
-\newblock Science and Engineering Ethics 1: 11--20.
-\bibAnnoteFile{sieber_not_1995}
+\bibinfo{author}{Sieber, P.J.E.}, \bibinfo{author}{Trumbo, B.E.} 
+\newblock \bibinfo{title}{{(Not) Giving credit where credit is due: 
+	citation of data sets.}}
+\newblock \emph{\bibinfo{journal}{Science and Engineering Ethics}} 
+	\textbf{\bibinfo{volume}{1}}, \bibinfo{pages}{11--20}
+	(\bibinfo{year}{1995}).
 
 \bibitem{mooney_citing_2011}
-Mooney H (2011) Citing data sources in the social sciences: do authors do it?
-\newblock Learned Publishing 24: 99--108.
-\bibAnnoteFile{mooney_citing_2011}
+\bibinfo{author}{Mooney, H.} 
+\newblock \bibinfo{title}{{Citing data sources in the social sciences: 
+	do authors do it?}}
+\newblock \emph{\bibinfo{journal}{Learned Publishing}} 
+	textbf{\bibinfo{volume}{24}}, \bibinfo{pages}{99--108}
+	(\bibinfo{year}{2011}).
 
 \bibitem{enke_users_2012}
-Enke N, Thessen A, Bach K, Bendix J, Seeger B, et~al. (2012) The user's view on
-  biodiversity data sharing — {Investigating} facts of acceptance and
-  requirements to realize a sustainable use of research data —.
-\newblock Ecological Informatics 11: 25--33.
-\bibAnnoteFile{enke_users_2012}
+\bibinfo{author}{Enke, N.}, \bibinfo{author}{Thessen, A.}, \bibinfo{author}{Bach, K.}, 
+	\bibinfo{author}{Bendix, J.}, \bibinfo{author}{Seeger, B.} \emph{et~al.} 
+\newblock \bibinfo{title}{{The user's view on biodiversity data sharing: 
+	investigating facts of acceptance and requirements to realize a sustainable use of research data.}}
+\newblock \emph{\bibinfo{journal}{Ecological Informatics}} 
+	\textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{25--33}
+	(\bibinfo{year}{2012}).
 
 \bibitem{ingwersen_indicators_2011}
-Ingwersen P, Chavan V (2011) Indicators for the {Data} {Usage} {Index} ({DUI}):
-  an incentive for publishing primary biodiversity data through global
-  information infrastructure.
-\newblock BMC Bioinformatics 12: S3.
-\bibAnnoteFile{ingwersen_indicators_2011}
+\bibinfo{author}{Ingwersen, P.}, \bibinfo{author}{Chavan, V.} 
+\newblock \bibinfo{title}{{Indicators for the Data Usage Index (DUI):
+  an incentive for publishing primary biodiversity data through global information infrastructure.}}
+\newblock \emph{\bibinfo{journal}{BMC Bioinformatics}} 
+	\textbf{\bibinfo{volume}{12}}, \bibinfo{pages}{S3}
+	(\bibinfo{year}{2011}).
 
 \bibitem{katz_transitive_2014}
-Katz DS (2014) Transitive {Credit} as a {Means} to {Address} {Social} and
-  {Technological} {Concerns} {Stemming} from {Citation} and {Attribution} of
-  {Digital} {Products}.
-\newblock Journal of Open Research Software 2: e20.
-\bibAnnoteFile{katz_transitive_2014}
+\bibinfo{author}{Katz, D.S.} (2014) 
+\newblock \bibinfo{title}{{Transitive credit as a means to address social and technological concerns stemming from citation and attribution of digital products.}}
+\newblock \emph{\bibinfo{journal}{Journal of Open Research Software}}
+	\textbf{\bibinfo{volume}{2}}, \bibinfo{pages}{e20} 
+	(\bibinfo{year}{2014}).
+
+\bibitem{ding_entitymetrics_2013}
+\bibinfo{author}{Ding, Y.}, \bibinfo{author}{Song, M.}, 
+	\bibinfo{author}{Han, J.}, \bibinfo{author}{Yu, Q.}, 
+	\bibinfo{author}{Yan, E.}, \bibinfo{author}{Lin, L.},
+	\bibinfo{Chambers, T.}
+\newblock \bibinfo{title}{Entitymetrics: Measuring the impact of entities}
+\newblock \emph{\bibinfo{journal}{PloS ONE}}
+	 \textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{e71416} 
+	 (\bibinfo{year}{2013}).
+
 
 \end{thebibliography}
-
 
 
 \end{document}
